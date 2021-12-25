@@ -15,13 +15,13 @@
     <style></style>
   </head>
   <body>
-    <div class="container">
+    <div class="container flow">
       <h1 class="uppercase">Design system</h1>
 
-      <section id="colors" style="margin: 4rem 0">
+      <section class="flow" id="colors" style="margin: 4rem 0">
         <h2 class="numbered-title"><span>01</span> colors</h2>
         <div class="flex">
-          <div style="flex-grow: 1">
+          <div class="flow" style="flex-grow: 1">
             <div
               class="bg-dark text-white ff-serif fs-500"
               style="padding: 3rem 1rem 1rem; border: 1px solid white"
@@ -31,7 +31,7 @@
             <p><span class="text-accent">RGB</span> 11, 13, 23</p>
             <p><span class="text-accent">HSL</span> 230°, 35%, 7%</p>
           </div>
-          <div style="flex-grow: 1">
+          <div class="flow" style="flex-grow: 1">
             <div
               class="bg-accent text-dark ff-serif fs-500"
               style="padding: 3rem 1rem 1rem; border: 1px solid white"
@@ -41,7 +41,7 @@
             <p><span class="text-accent">RGB</span> 208, 214, 249</p>
             <p><span class="text-accent">HSL</span> 231°, 77%, 90%</p>
           </div>
-          <div style="flex-grow: 1">
+          <div class="flow" style="flex-grow: 1">
             <div
               class="bg-white text-dark ff-serif fs-500"
               style="padding: 3rem 1rem 1rem; border: 1px solid white"
@@ -54,7 +54,7 @@
         </div>
       </section>
 
-      <section id="typography" style="margin: 4rem 0">
+      <section class="flow" id="typography" style="margin: 4rem 0">
         <h2 class="numbered-title"><span>02 </span>Typography</h2>
         <div class="flex">
           <div class="flow" style="flex-basis: 100%; --flow-space: 4rem">
@@ -147,17 +147,17 @@
             <ul class="primary-navigation underline-indicators flex">
               <li class="active">
                 <a class="uppercase text-white letter-spacing-2" href="#"
-                  ><span>00</span>Active</a
+                  ><span>01</span>Active</a
                 >
               </li>
               <li>
                 <a class="uppercase text-white letter-spacing-2" href="#"
-                  ><span>01</span>Hovered</a
+                  ><span>02</span>Hovered</a
                 >
               </li>
               <li>
                 <a class="uppercase text-white letter-spacing-2" href="#"
-                  ><span>02</span>Idle</a
+                  ><span>03</span>Idle</a
                 >
               </li>
             </ul>
@@ -169,7 +169,7 @@
             <!-- explore button -->
             <a
               href="#"
-              class="large-button uppercase ff-serif text-dark fs-600 bg-white"
+              class="large-button uppercase ff-serif fs-600 text-dark bg-white"
               >Explore</a
             >
           </div>
@@ -185,6 +185,6 @@
       </section>
     </div>
 
-    <script src="index.pack.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
