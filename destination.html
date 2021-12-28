@@ -83,17 +83,17 @@
         <span aria-hidden="true">01</span> Pick your destination
       </h1>
 
-      <picture>
+      <picture id="moon-image">
         <source srcset="assets/destination/image-moon.webp" type="image/webp" />
         <img src="assets/destination/image-moon.png" alt="the moon" />
       </picture>
 
-      <picture hidden>
+      <picture id="mars-image" hidden>
         <source srcset="assets/destination/image-mars.webp" type="image/webp" />
         <img src="assets/destination/image-mars.png" alt="the planet mars" />
       </picture>
 
-      <picture hidden>
+      <picture id="europa-image" hidden>
         <source
           srcset="assets/destination/image-europa.webp"
           type="image/webp"
@@ -104,7 +104,7 @@
         />
       </picture>
 
-      <picture hidden>
+      <picture id="titan-image" hidden>
         <source
           srcset="assets/destination/image-titan.webp"
           type="image/webp"
@@ -117,6 +117,7 @@
           aria-selected="true"
           role="tab"
           aria-controls="moon-tab"
+          data-image="moon-image"
           class="uppercase text-accent letter-spacing-2 ff-sans-cond"
           tabindex="0"
         >
@@ -126,6 +127,7 @@
           aria-selected="false"
           role="tab"
           aria-controls="mars-tab"
+          data-image="mars-image"
           class="uppercase text-accent letter-spacing-2 ff-sans-cond"
           tabindex="-1"
         >
@@ -135,6 +137,7 @@
           aria-selected="false"
           role="tab"
           aria-controls="europa-tab"
+          data-image="europa-image"
           class="uppercase text-accent letter-spacing-2 ff-sans-cond"
           tabindex="-1"
         >
@@ -145,6 +148,7 @@
           aria-selected="false"
           role="tab"
           aria-controls="titan-tab"
+          data-image="titan-image"
           class="uppercase text-accent letter-spacing-2 ff-sans-cond"
           tabindex="-1"
         >
