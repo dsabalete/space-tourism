@@ -9,29 +9,27 @@ tabs.forEach((tab) => {
 
 let tabFocus = 0
 function changeTabFocus(e) {
-  const keydownLeft = 37
-  const keydownRight = 39
+  const keydownLeft = e.keyCode === 37
+  const keydownRight = e.keyCode === 39
 
-  if (e.keyCode === keydownLeft || e.keyCode === keydownRight) {
+  if (keydownLeft || keydownRight) {
     tabs[tabFocus].setAttribute('tabindex', -1)
-  }
 
-  if (e.keyCode === keydownRight) {
-    tabFocus++
-    if (tabFocus >= tabs.length) {
-      tabFocus = 0
+    if (keydownRight) {
+      tabFocus++
+      if (tabFocus >= tabs.length) {
+        tabFocus = 0
+      }
+    } else if (keydownLeft) {
+      tabFocus--
+      if (tabFocus < 0) {
+        tabFocus = tabs.length - 1
+      }
     }
-  }
 
-  if (e.keyCode === keydownLeft) {
-    tabFocus--
-    if (tabFocus < 0) {
-      tabFocus = tabs.length - 1
-    }
+    tabs[tabFocus].setAttribute('tabindex', 0)
+    tabs[tabFocus].focus()
   }
-
-  tabs[tabFocus].setAttribute('tabindex', 0)
-  tabs[tabFocus].focus()
 }
 
 function changeTabPanel(e) {
